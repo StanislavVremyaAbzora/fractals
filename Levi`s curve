@@ -1,0 +1,26 @@
+from turtle import *
+
+
+def func(a, b):
+    speed(100)
+    if a == 0:
+        forward(b)
+    else:
+        func(a - 1, b/1.5)
+        right(90)
+        func(a - 1, b/1.5)
+        left(90)
+
+
+def main():
+    up()
+    goto(-100, 0)
+    down()
+    q = int(input('Глубина рекурсии:'))
+    w = int(input('Длина стороны:'))
+    func(q, w)
+    mainloop()
+
+
+if __name__ == '__main__':
+    main()
