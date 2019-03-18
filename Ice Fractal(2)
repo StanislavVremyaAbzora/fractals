@@ -1,0 +1,32 @@
+from turtle import *
+
+
+def func(a, b):
+    if a == 0:
+      forward(b)
+    else:
+      func(a - 1, b / 2)
+      left(115)
+      func(a - 1, b / 4)
+      right(180)
+      func(a - 1, b / 4)
+      left(130)
+      func(a - 1, b / 4)
+      right(180)
+      func(a - 1, b / 4)
+      left(115)
+      func(a - 1, b / 2)
+
+
+def main():
+  up()
+  goto(-200, 0)
+  down()
+  n = int(input('Пожалуйста, укажите глубину рекурсии:'))
+  z = int(input('Пожалуйста, укажите длину стороны:'))
+  func(n, z)
+  mainloop()
+
+
+if __name__ == '__main__':
+    main()
