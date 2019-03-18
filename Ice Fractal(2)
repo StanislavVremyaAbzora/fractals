@@ -2,6 +2,7 @@ from turtle import *
 
 
 def func(a, b):
+    speed(10)
     if a == 0:
       forward(b)
     else:
