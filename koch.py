@@ -11,6 +11,7 @@ def koch(order, size):
         koch(order-1, size/3)
         left(60)
         koch(order-1, size/3)
+        
 
 def main():
     up()
@@ -19,5 +20,7 @@ def main():
     n = int(input('Глубина рекурсии:'))
     a = int(input('Длина стороны:'))
     koch(n, a)
-
+    mainloop()
+    
+    
 main()
