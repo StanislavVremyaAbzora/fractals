@@ -1,0 +1,29 @@
+from turtle import *
+
+
+def f(a, b):
+    r = b/(a+1)
+    for i in range(a):
+        speed(10)
+        forward(r)
+        left(45)
+        f(a - i - 1, 0.5 * r * (a - i - 1))
+        left(90)
+        f(a - i - 1, 0.5 * r * (a - i - 1))
+        right(135)
+    forward(r)
+    left(180)
+    forward(b)
+
+
+def main():
+    up()
+    goto(0, -300)
+    left(90)
+    down()
+    f(int(input('Глубина рекурсии:')), int(input('Длина стороны:')))
+    mainloop()
+
+
+if __name__ == '__main__':
+    main()
