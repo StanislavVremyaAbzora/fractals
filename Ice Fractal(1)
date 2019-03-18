@@ -21,6 +21,7 @@ def main():
   down()
   func((int(input('Глубина рекурсии:'))),
        (int(input('Длина стороны:'))))
+  mainloop()
 
 
 if __name__ == '__main__':
